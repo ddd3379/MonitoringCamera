@@ -1,3 +1,4 @@
+import os
 import cv2
 import datetime
 
@@ -38,7 +39,10 @@ def main():
 def recVideo(cam):
     dt_now = datetime.datetime.now()
 
-    fileName = save_path + dt_now.strftime('%Y%m%d_%H%M%S') + '.avi'
+    rec_save_path = save_path + dt_now.strftime('%Y%m%d') + "/"
+    os.makedirs(rec_save_path, exist_ok=True)
+
+    fileName = rec_save_path + dt_now.strftime('%Y%m%d_%H%M%S') + '.avi'
 
     fourcc = cv2.VideoWriter_fourcc(*'XVID')
     video = cv2.VideoWriter(fileName, fourcc, fps, (600,400))
