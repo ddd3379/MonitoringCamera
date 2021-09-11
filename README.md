@@ -1,7 +1,7 @@
 # ■MonitoringCamera
 
 ## 〇構成
-- saveImg : キャプチャした画像・動画が保存される。
+- saveImgフォルダ : キャプチャした画像・動画が保存される。
 - 01_camera.py : Enterキーが押されるまで、webカメラで撮影してる映像を画面上に表示  
 3行目の「cam = cv2.VideoCapture(0)」の部分で使用するカメラを選択可能。
 - 02_monitoringCamera.py : Enterキーが押されるまで、動きを検知したら、画像を保存する。  
